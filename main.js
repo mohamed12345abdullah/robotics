@@ -7,7 +7,7 @@ const url="mongodb+srv://mohamed12345abdullah:abdo123@cluster0.dzzltox.mongodb.n
 const client=new MongoClient(url);
 const fs=require("fs");
 const { assert } = require('console');
-app.listen(8000);
+app.listen(8000,"127.0.0.1");
 
 function readlog(){
       const data= fs.readFileSync("./index.html","utf8",(err)=>{
