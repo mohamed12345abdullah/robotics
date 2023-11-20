@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign Up</title>
+    <style>
+        body{
+            text-align: center;
+            width: 100%;
+            background-color: azure;
+        
+        }
+        form{
+            width: 50%;
+            margin: auto;
+        }
+        #name{
+            width: 50%;
+            margin: auto;
+            height: 50px;
+        }
+        .input{
+            width: 50%;
+            margin: auto;
+            height: 50px;
+        }
+        .sub{
+            width: 30%;
+            margin: auto;
+            height: 50px;
+        }
+        option{
+            text-align: center;
+            
+        }
+        nav{
+            background-color: cadetblue;
+            height: 50px;
+        }
+        nav a{
+            margin: 20px;
+            background-color: rgb(162, 216, 216);
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="http://localhost:8000/committee/web"> web committee  </a>
+        <a href="http://localhost:8000/committee/hr"> hr committee  </a>
+        <a href="http://localhost:8000/committee/media"> madia committee  </a>
+        <a href="http://localhost:8000/committee/Ac mechanic"> Ac mechanic  </a>
+        <a href="http://localhost:8000/committee/Ac elctric"> Ac elctric  </a>
+        <a href="http://localhost:8000/committee/OC"> OC  </a>
+    </nav>
+
+    <h1>sign up</h1>
+    
+    <form action="http://localhost:8000/signup" method="post">
+
+       <h2>name</h2><input type="text" name="name" id="name"> <br>
+       <h2>password</h2> <input type="password" name="pass" class="input" id="pass"><br>
+       <br>
+       <h2>  committee </h2>
+       <select name="category" id="" class="input">
+        <option value="web">web</option>
+        <option value="hr">hr</option>
+        <option value="media">media</option>
+        <option value="Ac mechanic">Ac mechanic</option>
+        <option value="Ac elctric">Ac elctric</option>
+        <option value="OC">OC</option>
+        
+       </select><br><br>
+       <input type="submit" value="send" class="sub">
+
+    </form>
+    <br>
+
+    <form action="http://localhost:8000/log" method="get" >
+        <input type="submit" value="log in" class="sub">
+
+    </form>
+    
+</body>
+</html>
