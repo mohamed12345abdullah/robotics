@@ -6,11 +6,13 @@ const{MongoClient}=require("mongodb");
 const url="mongodb+srv://mohamed12345abdullah:abdo123@cluster0.dzzltox.mongodb.net/?retryWrites=true&w=majority";
 const client=new MongoClient(url);
 const fs=require("fs");
+const path=require("path");
+app.use(express.static(__dirname+"/public"));
 const { assert } = require('console');
 app.listen(8000);
 
 function readlog(){
-      const data= fs.readFileSync("./index.html","utf8",(err)=>{
+      const data= fs.readFileSync("./public/index.html","utf8",(err)=>{
               if(err){return err};
               
        })
@@ -80,11 +82,12 @@ app.get ("/log", (req,res)=>{
 
 app.get ("/sign", (req,res)=>{
        
-       const data=fs.readFileSync("./signUp.html","utf8",(err)=>{
+       const data=fs.readFileSync("./public/signUp.html","utf8",(err)=>{
               if(err){res.end(err)};
              
        });
        res.end(data);
+       // res.end();
        
 })
 
