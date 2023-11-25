@@ -9,7 +9,7 @@ const fs=require("fs");
 const path=require("path");
 app.use(express.static(__dirname+"/public"));
 const { assert } = require('console');
-app.listen(8000);
+app.listen(8000,"127.0.0.1");
 
 function readlog(){
       const data= fs.readFileSync("./public/index.html","utf8",(err)=>{

@@ -7,6 +7,6 @@
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "app": "nodemon index.js"
+    "app": "nodemon main.js"
   }
 }
